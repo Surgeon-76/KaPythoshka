@@ -1,6 +1,7 @@
 # объявление функции
 def draw_triangle(fill, base):
-    pass
+    for i in range(base):
+        print(*[fill for n in range((base // 2 + 1) - abs(base // 2 - i))])
 
 # считываем данные
 fill = input()
