@@ -1,6 +1,7 @@
 # объявление функции
 def find_all(target, symbol):
     m = list(target)
+    
     print(m)
 
     #return [i for i in range...]
