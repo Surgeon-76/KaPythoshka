@@ -1,6 +1,8 @@
 # объявление функции
 def merge(list1, list2):
-    pass
+    list1.extend(list2)
+    list1.sort()
+    return list1
 
 # считываем данные
 numbers1 = [int(c) for c in input().split()]
