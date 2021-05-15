@@ -4,7 +4,7 @@ def find_all(target, symbol):
 
     print(m)
 
-    #return [i for i in range(len(s)) if shar == s[i]]  ????????
+    #return [i for i in range(len(target)) if symbol == s[i]]  ????????
 
 # считываем данные
 s = input()
