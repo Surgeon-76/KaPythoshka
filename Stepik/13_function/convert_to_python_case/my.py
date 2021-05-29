@@ -6,7 +6,7 @@ def convert_to_python_case(text):
             snake_style += '_'
         snake_style += i.lower()
     return snake_style
-    
+  #MyMethodThatDoSomething не  
 # считываем данные
 txt = input()
 
