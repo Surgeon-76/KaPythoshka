@@ -14,7 +14,6 @@ digits = '0123456789'
 lowercase_letters = 'abcdefghijklmnopqrstuvwxyz'
 uppercase_letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 punctuation = '!#$%&*+-=?@^_'
-chars = ''
 
 #считывание данных и определение алгоритма паролей
 n = int(input('Введите количество паролей для генерации: '))
