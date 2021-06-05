@@ -10,6 +10,6 @@ for i in text:
     print(i, length_words(i))
     
     
-    length_words(i)
+ #   length_words(i)
     
 
