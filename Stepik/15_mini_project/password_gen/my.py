@@ -2,13 +2,13 @@ from random import*
 
 #функция генератор
 def generate_password(length, pwr):
-    shuffle(pwr)
-    print(pwr)
+    shuffle(pwr)                     #перемешаем всё...
     password = ''
     for j in range(length):
         password += choice(pwr)
     return password
 
+#определение переменных
 pwr = []
 digits = '0123456789'
 lowercase_letters = 'abcdefghijklmnopqrstuvwxyz'
@@ -20,19 +20,17 @@ chars = ''
 n = int(input('Введите количество паролей для генерации: '))
 length = int(input('Введите длину пароля: '))
 if (input('Включить цифры? (д = да, н = нет) ').strip().lower()) == ('д' and 'l'):
-    chars += digits    
+    pwr.extend(digits)    
 if (input('Включить прописные буквы? (д = да, н = нет) ').strip().lower()) == ('д' and 'l'):
-    chars += lowercase_letters
+    pwr.extend(lowercase_letters)
 if (input('Включить строчные буквы? (д = да, н = нет) ').strip().lower()) == ('д' and 'l'):
-    chars += uppercase_letters
+    pwr.extend(uppercase_letters)
 if (input('Включить символы, такие как !#$%&*+-=?@^_? (д = да, н = нет) ').strip().lower()) == ('д' and 'l'):
-    chars += punctuation
+    pwr.extend(punctuation)
 if (input('Исключить символы il1Lo0O? (д = да, н = нет)').strip().lower()) == ('д' and 'l'):
     for c in 'il1Lo0O':
-        chars = chars.replace(c, '')
-pwr.extend(chars)
+        pwr.remove(c)
 
 #сам генератор
 for _ in range(n):
-    #shuffle(pwr)
     print(generate_password(length, pwr))
