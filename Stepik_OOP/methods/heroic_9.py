@@ -19,12 +19,14 @@ class DataBase:
     # здесь добавлять методы
 
     def insert(self, data):
-        for lst in data:
-            self.lst_data.append(dict(zip(self.FIELDS, lst.split())))
+        # for lst in data:
+        #     self.lst_data.append(dict(zip(self.FIELDS, lst.split())))
+        self.lst_data = [dict(zip(self.FIELDS, lst.split())) for lst in data]
 
     def select(self, a, b):
         b = min(b, len(self.lst_data))
-        return self.lst_data[a:b]
+        return self.lst_data[a:b+1]
+
 
 db = DataBase()
 db.insert(lst_in)
